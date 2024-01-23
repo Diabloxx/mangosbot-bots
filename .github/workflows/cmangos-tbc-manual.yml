@@ -170,7 +170,7 @@ jobs:
             [**Changelog**](${{github.server_url}}/${{ github.repository }}/compare/r-${{ steps.dateprev.outputs.date }}...r-${{ steps.date.outputs.date }}) - [**All Releases**](${{github.server_url}}/${{ github.repository }}/tags) - [**Build Log**](${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}})
             [**Download Windows Binaries**](${{github.server_url}}/${{ github.repository }}/releases/download/r-${{ steps.date.outputs.date }}/${{env.ARCHIVE_FILENAME}})
           footer: Build success
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_BUILD }}
+          webhookUrl: https://discord.com/api/webhooks/1189538257311113299/ZjsYKXKeErViOGWZquCXCKEtCbt1roDs3v_XS_A9n1VqVlUou9bxz0fdF3F0FDkEfOpm
           avatarUrl: https://github.githubassets.com/favicons/favicon-success.png
 
   notify:
@@ -197,5 +197,5 @@ jobs:
           details: |
             [**Last commits**](${{github.server_url}}/${{ github.repository }}/commits/${{env.BOTS_BRANCH}}) - [**Build Log**](${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}})
           footer: Build fail
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_BUILD }}
+          webhookUrl: https://discord.com/api/webhooks/1189538257311113299/ZjsYKXKeErViOGWZquCXCKEtCbt1roDs3v_XS_A9n1VqVlUou9bxz0fdF3F0FDkEfOpm
           avatarUrl: https://github.githubassets.com/favicons/favicon-failure.png
