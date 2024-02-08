@@ -188,7 +188,7 @@ bool SummonAction::Teleport(Player* requester, Player *summoner, Player *player)
             }
             if (summoner->IsWithinLOS(x, y, z + player->GetCollisionHeight(), true))
             {
-                if (sServerFacade.UnitIsDead(player) && sServerFacade.IsAlive(summoner))
+                if (sServerFacade.UnitIsDead(player) && sServerFacade.IsAlive(summoner) && !summoner->IsInCombat())
                 {
                     player->ResurrectPlayer(1.0f, false);
                     player->SpawnCorpseBones();
